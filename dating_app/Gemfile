@@ -9,8 +9,6 @@ gem 'pg'
 
 gem 'therubyracer'
 gem 'less-rails-bootstrap'
-gem 'sass-rails', '~> 3.2.3'
-gem 'coffee-rails', '~> 3.2.1'
 gem 'haml-rails'
 gem 'devise'
 gem 'omniauth-twitter'
@@ -36,6 +34,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
+
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
@@ -58,3 +57,4 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+end
