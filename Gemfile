@@ -35,7 +35,7 @@ gem 'pg'
   group :assets do
     gem 'sass-rails',   '~> 3.2.3'
     gem 'coffee-rails', '~> 3.2.1'
-
+    gem 'jquery-rails'
 
     # See https://github.com/sstephenson/execjs#readme for more supported runtimes
     # gem 'therubyracer', :platforms => :ruby
@@ -43,7 +43,7 @@ gem 'pg'
     gem 'uglifier', '>= 1.0.3'
   end
 
-  gem 'jquery-rails'
+  
 
   group :production do
     gem 'rails_12factor'
