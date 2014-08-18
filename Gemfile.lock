@@ -201,6 +201,11 @@ GEM
       activesupport (= 3.2.18)
       bundler (~> 1.0)
       railties (= 3.2.18)
+    rails_12factor (0.0.2)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.2)
+    rails_stdout_logging (0.0.3)
     railties (3.2.18)
       actionpack (= 3.2.18)
       activesupport (= 3.2.18)
@@ -256,7 +261,7 @@ DEPENDENCIES
   fog
   haml-rails
   html2haml
-  jquery-rails (~> 2.3.0)
+  jquery-rails
   less-rails-bootstrap
   letter_opener
   meta_request
@@ -268,6 +273,7 @@ DEPENDENCIES
   pry-stack_explorer
   railroady
   rails (= 3.2.18)
+  rails_12factor
   rdoc
   sass-rails (~> 3.2.3)
   therubyracer
