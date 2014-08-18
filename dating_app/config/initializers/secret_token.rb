@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-DatingApp::Application.config.secret_token = '34cb8e37b4593697a00c68ad36cd19d719f4fbc4662cce558d22b5e8329fded8de1e3910e32b52fc4194b5f2df0d2479f255bdb4d87d48c3e57a3936fa46737f'
+DatingApp::Application.config.secret_token = '0aaffe1a8222524f31b297d0a296e8c025e868bd38a1fcacd59b687dbde35f00da13ad92a08962ec7b1e0dc8457f316537c1242e310de68b598a371ea9cec708'
