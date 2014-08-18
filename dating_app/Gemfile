@@ -8,9 +8,7 @@ gem 'rails', '3.2.18'
 gem 'pg'
 
 gem 'therubyracer'
-gem 'less-rails-bootstrap'
-gem 'sass-rails', '~> 3.2.3'
-gem 'coffee-rails', '~> 3.2.1'
+gem 'less-rails-bootstrap'  
 gem 'haml-rails'
 gem 'devise'
 gem 'omniauth-twitter'
@@ -29,12 +27,15 @@ gem 'railroady'
 gem 'rdoc'
 gem 'annotate'
 gem 'letter_opener'
+gem 'html2haml'
+gem 'yard'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
