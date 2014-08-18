@@ -1817,3 +1817,46 @@ Served asset /users.css - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-18 15:42:23 +0100
 Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-08-18 15:50:20 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (20.7ms)
+Compiled jquery.js  (3ms)  (pid 27623)
+Compiled jquery_ujs.js  (0ms)  (pid 27623)
+Compiled application.js  (47ms)  (pid 27623)
+Completed 200 OK in 128.2ms (Views: 88.7ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-18 15:50:20 +0100
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-18 15:50:20 +0100
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-18 15:50:20 +0100
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/xgeneral.css?body=1" for 127.0.0.1 at 2014-08-18 15:50:20 +0100
+Served asset /xgeneral.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-18 15:50:20 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-18 15:50:20 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-18 15:50:20 +0100
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-18 15:50:20 +0100
+Served asset /application.js - 304 Not Modified (6ms)
