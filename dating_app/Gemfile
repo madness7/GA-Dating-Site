@@ -27,6 +27,8 @@ gem 'railroady'
 gem 'rdoc'
 gem 'annotate'
 gem 'letter_opener'
+gem 'html2haml'
+gem 'yard'
 
 # Gems used only for assets and not required
 # in production environments by default.
