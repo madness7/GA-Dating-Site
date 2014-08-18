@@ -1,9 +1,10 @@
 DatingApp::Application.routes.draw do
   devise_for :users
+  resources :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
-root to: "posts#index"
+root to: "users#show"
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
