@@ -1,0 +1,25 @@
+%h1 Listing user_connections
+
+%table
+  %tr
+    %th User 1
+    %th User 2
+    %th Interacted
+    %th Negative connection
+    %th
+    %th
+    %th
+
+  - @user_connections.each do |user_connection|
+    %tr
+      %td= user_connection.user_1_id
+      %td= user_connection.user_2_id
+      %td= user_connection.interacted
+      %td= user_connection.negative_connection
+      %td= link_to 'Show', user_connection
+      %td= link_to 'Edit', edit_user_connection_path(user_connection)
+      %td= link_to 'Destroy', user_connection, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New User connection', new_user_connection_path
