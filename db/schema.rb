@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140818140105) do
+ActiveRecord::Schema.define(:version => 20140818160820) do
+
+  create_table "user_connections", :force => true do |t|
+    t.integer  "user_1_id"
+    t.integer  "user_2_id"
+    t.boolean  "interacted"
+    t.boolean  "negative_connection"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -27,7 +36,6 @@ ActiveRecord::Schema.define(:version => 20140818140105) do
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
-    t.string   "unconfirmed_email"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.date     "dob"
