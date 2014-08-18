@@ -1,1 +1,29 @@
-hello world
+
+<%= image_tag @user.profile_pic, width: 200 %>
+
+<p>
+  <b>Name:</b>
+  <%= @user.first_name %><%= @user.last_name %>
+</p>
+
+<p>
+  <b>Date of Birth</b>
+  <%= @user.dob %>
+</p>
+
+<p>
+  <b>Gender</b>
+  <%= @user.gender %>
+</p>
+
+<p>
+  <b>About me</b>
+  <%= @user.about_me %>
+</p>
+
+<p>
+  <b>Looking for</b>
+  <%= @user.looking_for %>
+</p>
+
+
