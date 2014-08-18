@@ -41,13 +41,11 @@ test:
   encoding: unicode
   database: dating_app_test
   pool: 5
-  username: dating_app
-  password:
+ 
 
 production:
   adapter: postgresql
   encoding: unicode
   database: dating_app_production
   pool: 5
-  username: dating_app
-  password:
+ 
