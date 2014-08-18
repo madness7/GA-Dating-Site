@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   has_many(:user_connections, :foreign_key => :user_1_id, :dependent => :destroy)
   has_many(:reverse_user_connections, :class_name => :UserConnection, :foreign_key => :user_2_id, :dependent => :destroy)
   has_many :users, :through => :user_connections, :source => :user_2
+  has_and_belongs_to_many :interests
 
 end
 
