@@ -75,5 +75,5 @@ DatingApp::Application.configure do
     :port      => 25,
     :user_name => "gac.curl@gmail.com",
     :password  => "lSafKL5-ZP7pzUy-GyXl3w"
-
+}
 end
