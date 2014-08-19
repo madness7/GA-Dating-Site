@@ -1,4 +1,7 @@
 DatingApp::Application.routes.draw do
+  resources :chats
+
+
   resources :interests
 
 
