@@ -1,7 +1,18 @@
 class UsersController < ApplicationController
 
    before_filter :authenticate_user!
- # user_connection
+
+ 
+
+  def index
+    @user = User.find(:all, :conditions => { :gender => current_user.looking_for })
+    @match = @user.shuffle.first
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json { render json: @match }
+      end
+    end
+
   def show
     @user = User.find(current_user.id)
 
