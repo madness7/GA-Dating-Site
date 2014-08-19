@@ -19517,3 +19517,356 @@ Served asset /gallery/responsive/icons/ajax-loader.gif - 304 Not Modified (0ms)
 
 Started GET "/assets/gallery/responsive/icons/black.png" for 127.0.0.1 at 2014-08-19 16:49:58 +0100
 Served asset /gallery/responsive/icons/black.png - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-19 16:57:14 +0100
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mUser Load (4.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 17]]
+  Rendered users/show.html.erb within layouts/application (66.2ms)
+Completed 200 OK in 151.8ms (Views: 99.9ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2014-08-19 16:57:15 +0100
+Served asset /interests.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/user_connections.css?body=1" for 127.0.0.1 at 2014-08-19 16:57:15 +0100
+Served asset /user_connections.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-19 16:57:15 +0100
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/xgeneral.css?body=1" for 127.0.0.1 at 2014-08-19 16:57:15 +0100
+Served asset /xgeneral.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gallery/responsive/elastislide.css?body=1" for 127.0.0.1 at 2014-08-19 16:57:15 +0100
+Served asset /gallery/responsive/elastislide.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-19 16:57:15 +0100
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gallery/responsive.css?body=1" for 127.0.0.1 at 2014-08-19 16:57:15 +0100
+Served asset /gallery/responsive.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gallery/slideshow.css?body=1" for 127.0.0.1 at 2014-08-19 16:57:15 +0100
+Served asset /gallery/slideshow.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gallery/galleria/classic.css?body=1" for 127.0.0.1 at 2014-08-19 16:57:15 +0100
+Served asset /gallery/galleria/classic.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gallery/touch_touch.css?body=1" for 127.0.0.1 at 2014-08-19 16:57:15 +0100
+Served asset /gallery/touch_touch.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-19 16:57:15 +0100
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-19 16:57:15 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2014-08-19 16:57:15 +0100
+Served asset /interests.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user_connections.js?body=1" for 127.0.0.1 at 2014-08-19 16:57:15 +0100
+Served asset /user_connections.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-19 16:57:15 +0100
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gallery/responsive.js?body=1" for 127.0.0.1 at 2014-08-19 16:57:15 +0100
+Served asset /gallery/responsive.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gallery/slideshow.js?body=1" for 127.0.0.1 at 2014-08-19 16:57:15 +0100
+Served asset /gallery/slideshow.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gallery/galleria.js?body=1" for 127.0.0.1 at 2014-08-19 16:57:15 +0100
+Served asset /gallery/galleria.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gallery/galleria/classic.js?body=1" for 127.0.0.1 at 2014-08-19 16:57:15 +0100
+Served asset /gallery/galleria/classic.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gallery/touch_touch.js?body=1" for 127.0.0.1 at 2014-08-19 16:57:15 +0100
+Served asset /gallery/touch_touch.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery/jquery.easing-1.3.js?body=1" for 127.0.0.1 at 2014-08-19 16:57:15 +0100
+Served asset /jquery/jquery.easing-1.3.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery/jquery.elastislide.js?body=1" for 127.0.0.1 at 2014-08-19 16:57:15 +0100
+Served asset /jquery/jquery.elastislide.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery/jquery.tmpl.min.js?body=1" for 127.0.0.1 at 2014-08-19 16:57:15 +0100
+Served asset /jquery/jquery.tmpl.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/image_gallery.js" for 127.0.0.1 at 2014-08-19 16:57:15 +0100
+
+ActionController::RoutingError (No route matches [GET] "/image_gallery.js"):
+  actionpack (3.2.18) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.18) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.18) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.18) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.18) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.18) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.18) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.18) lib/rails/engine.rb:484:in `call'
+  railties (3.2.18) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.18) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/smaton/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/smaton/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/smaton/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/smaton/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-3.2.18/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/gallery/responsive/icons/black.png" for 127.0.0.1 at 2014-08-19 16:57:15 +0100
+Served asset /gallery/responsive/icons/black.png - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gallery/responsive/icons/ajax-loader.gif" for 127.0.0.1 at 2014-08-19 16:57:15 +0100
+Served asset /gallery/responsive/icons/ajax-loader.gif - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-19 16:57:31 +0100
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 17]]
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 19.3ms (Views: 12.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2014-08-19 16:57:31 +0100
+Served asset /interests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-19 16:57:31 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery/responsive/elastislide.css?body=1" for 127.0.0.1 at 2014-08-19 16:57:31 +0100
+Served asset /gallery/responsive/elastislide.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_connections.css?body=1" for 127.0.0.1 at 2014-08-19 16:57:31 +0100
+Served asset /user_connections.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-19 16:57:31 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/xgeneral.css?body=1" for 127.0.0.1 at 2014-08-19 16:57:31 +0100
+Served asset /xgeneral.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery/responsive.css?body=1" for 127.0.0.1 at 2014-08-19 16:57:31 +0100
+Served asset /gallery/responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery/slideshow.css?body=1" for 127.0.0.1 at 2014-08-19 16:57:31 +0100
+Served asset /gallery/slideshow.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery/galleria/classic.css?body=1" for 127.0.0.1 at 2014-08-19 16:57:31 +0100
+Served asset /gallery/galleria/classic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery/touch_touch.css?body=1" for 127.0.0.1 at 2014-08-19 16:57:31 +0100
+Served asset /gallery/touch_touch.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-19 16:57:31 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-19 16:57:31 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2014-08-19 16:57:31 +0100
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_connections.js?body=1" for 127.0.0.1 at 2014-08-19 16:57:31 +0100
+Served asset /user_connections.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-19 16:57:31 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery/responsive.js?body=1" for 127.0.0.1 at 2014-08-19 16:57:31 +0100
+Served asset /gallery/responsive.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery/slideshow.js?body=1" for 127.0.0.1 at 2014-08-19 16:57:31 +0100
+Served asset /gallery/slideshow.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery/galleria.js?body=1" for 127.0.0.1 at 2014-08-19 16:57:31 +0100
+Served asset /gallery/galleria.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery/galleria/classic.js?body=1" for 127.0.0.1 at 2014-08-19 16:57:31 +0100
+Served asset /gallery/galleria/classic.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery/touch_touch.js?body=1" for 127.0.0.1 at 2014-08-19 16:57:31 +0100
+Served asset /gallery/touch_touch.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery.easing-1.3.js?body=1" for 127.0.0.1 at 2014-08-19 16:57:31 +0100
+Served asset /jquery/jquery.easing-1.3.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery.elastislide.js?body=1" for 127.0.0.1 at 2014-08-19 16:57:31 +0100
+Served asset /jquery/jquery.elastislide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery.tmpl.min.js?body=1" for 127.0.0.1 at 2014-08-19 16:57:31 +0100
+Served asset /jquery/jquery.tmpl.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery/responsive/icons/ajax-loader.gif" for 127.0.0.1 at 2014-08-19 16:57:32 +0100
+Served asset /gallery/responsive/icons/ajax-loader.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery/responsive/icons/black.png" for 127.0.0.1 at 2014-08-19 16:57:32 +0100
+Served asset /gallery/responsive/icons/black.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-19 16:58:55 +0100
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 17 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 17]]
+  Rendered users/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 16.1ms (Views: 9.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2014-08-19 16:58:55 +0100
+Served asset /interests.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-19 16:58:55 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/xgeneral.css?body=1" for 127.0.0.1 at 2014-08-19 16:58:55 +0100
+Served asset /xgeneral.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-08-19 16:58:55 +0100
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery/responsive/elastislide.css?body=1" for 127.0.0.1 at 2014-08-19 16:58:55 +0100
+Served asset /gallery/responsive/elastislide.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_connections.css?body=1" for 127.0.0.1 at 2014-08-19 16:58:55 +0100
+Served asset /user_connections.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery/responsive.css?body=1" for 127.0.0.1 at 2014-08-19 16:58:55 +0100
+Served asset /gallery/responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery/slideshow.css?body=1" for 127.0.0.1 at 2014-08-19 16:58:55 +0100
+Served asset /gallery/slideshow.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery/galleria/classic.css?body=1" for 127.0.0.1 at 2014-08-19 16:58:55 +0100
+Served asset /gallery/galleria/classic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery/touch_touch.css?body=1" for 127.0.0.1 at 2014-08-19 16:58:55 +0100
+Served asset /gallery/touch_touch.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-19 16:58:55 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-19 16:58:55 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2014-08-19 16:58:55 +0100
+Served asset /interests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user_connections.js?body=1" for 127.0.0.1 at 2014-08-19 16:58:55 +0100
+Served asset /user_connections.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-08-19 16:58:55 +0100
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery/responsive.js?body=1" for 127.0.0.1 at 2014-08-19 16:58:55 +0100
+Served asset /gallery/responsive.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery/slideshow.js?body=1" for 127.0.0.1 at 2014-08-19 16:58:55 +0100
+Served asset /gallery/slideshow.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery/galleria.js?body=1" for 127.0.0.1 at 2014-08-19 16:58:55 +0100
+Served asset /gallery/galleria.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery/galleria/classic.js?body=1" for 127.0.0.1 at 2014-08-19 16:58:55 +0100
+Served asset /gallery/galleria/classic.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery/touch_touch.js?body=1" for 127.0.0.1 at 2014-08-19 16:58:55 +0100
+Served asset /gallery/touch_touch.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery.easing-1.3.js?body=1" for 127.0.0.1 at 2014-08-19 16:58:55 +0100
+Served asset /jquery/jquery.easing-1.3.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery.elastislide.js?body=1" for 127.0.0.1 at 2014-08-19 16:58:55 +0100
+Served asset /jquery/jquery.elastislide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery.tmpl.min.js?body=1" for 127.0.0.1 at 2014-08-19 16:58:55 +0100
+Served asset /jquery/jquery.tmpl.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery/responsive/icons/ajax-loader.gif" for 127.0.0.1 at 2014-08-19 16:58:56 +0100
+Served asset /gallery/responsive/icons/ajax-loader.gif - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gallery/responsive/icons/black.png" for 127.0.0.1 at 2014-08-19 16:58:56 +0100
+Served asset /gallery/responsive/icons/black.png - 304 Not Modified (0ms)
