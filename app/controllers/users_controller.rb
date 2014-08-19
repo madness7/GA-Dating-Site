@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
    before_filter :authenticate_user!
- user_connection
+ # user_connection
   def show
     @user = User.find(current_user.id)
 
