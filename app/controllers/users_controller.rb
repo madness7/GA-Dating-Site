@@ -25,6 +25,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        UserMailer.registration_confirmation(@user).deliver
         format.html { redirect_to @user, notice: 'User connection was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }
       else
