@@ -3,7 +3,6 @@ class UserConnectionsController < ApplicationController
   # GET /user_connections.json
   def index
     @user_connections = UserConnection.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @user_connections }

@@ -1,5 +1,10 @@
-$(function(){
-  $("#hate").on("click", function(event){
+var railsToDo = railsToDo || {};
+
+railsToDo.fields = ["user_1_id", "user_2_id", "negative_connection"]
+
+
+
+railsToDo.postNote = function(event){
     event.preventDefault();
     $.ajax({
       url: "/user_connections",
@@ -9,5 +14,18 @@ $(function(){
     }).success(function(){
       $("#hate").css({"background-color": "red"})
     })
+  }
+
+railsToDo.getNotes = function(){
+  var id = $('#current_user').val()
+  $.getJSON("/user_connections/"+id, function(data){
+    $.each(data, function(i, note){
+      }
+    )
   })
+}
+
+$(function(){
+  railsToDo.getNotes();
+  $("#hate").on("click", railsToDo.postNote)
 });

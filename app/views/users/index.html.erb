@@ -30,5 +30,15 @@
   <%= @user.looking_for %>
 </p>
 
-<button id="hate">Dislike!</button>
+<% if @connections==[] %>
+  <button id="hate">Dislike!</button>
+<% else %>
+  <% @connections.each do |c|%>
+    <% if c.user_2_id == @user.id %>
+      <p>YOU HATE THIS PERSON!</p>
+    <% else %>
+      <button id="hate">Dislike!</button>
+    <% end %>
+  <% end %>
+<% end %>
 
