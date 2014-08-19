@@ -1,0 +1,1 @@
+[{"name":"process_action.action_controller","payload":{"controller":"UsersController","action":"show","params":{"controller":"users","action":"show"},"format":"html","method":"GET","path":"/"},"time":"2014-08-19T14:52:42+01:00","transaction_id":"7d909c0ee3f00da386f3","end":"2014-08-19T14:52:42+01:00","duration":0.48899999999999993}]
