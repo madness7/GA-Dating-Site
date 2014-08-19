@@ -5,8 +5,10 @@ class UsersController < ApplicationController
  
 
   def index
-    @user = User.find(:all, :conditions => { :gender => current_user.looking_for })
-    @match = @user.shuffle.first
+    @users = User.where("id != ?", current_user.id)
+    @users = @users.where(gender: current_user.looking_for)
+    @users = @users.where(looking_for: current_user.gender)
+    @user = @users.first
       respond_to do |format|
         format.html # index.html.erb
         format.json { render json: @match }

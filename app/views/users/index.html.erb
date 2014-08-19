@@ -1,27 +1,34 @@
+<%= hidden_field_tag("current_user", value = current_user.id.to_i) %>
+<%= hidden_field_tag("this_user", value = @user.id.to_i) %>
 
-<%= image_tag @match.image_1, width: 200 %>
+
+
+<%= image_tag @user.image_1, width: 200 %>
 
 <p>
   <b>Name:</b>
-  <%= @match.first_name %><%= @match.last_name %>
+  <%= @user.first_name %><%= @user.last_name %>
 </p>
 
 <p>
   <b>Date of Birth</b>
-  <%= @match.dob %>
+  <%= @user.dob %>
 </p>
 
 <p>
   <b>Gender</b>
-  <%= @match.gender %>
+  <%= @user.gender %>
 </p>
 
 <p>
   <b>About me</b>
-  <%= @match.about_me %>
+  <%= @user.about_me %>
 </p>
 
 <p>
   <b>Looking for</b>
-  <%= @match.looking_for %>
+  <%= @user.looking_for %>
 </p>
+
+<button id="hate">Dislike!</button>
+
