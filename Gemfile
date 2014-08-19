@@ -5,8 +5,7 @@ gem 'rails', '3.2.18'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
-
+  gem 'pg'
   gem 'therubyracer'
   gem 'less-rails-bootstrap'  
   gem 'haml-rails'
