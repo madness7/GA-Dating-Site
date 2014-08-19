@@ -16,6 +16,7 @@ gem 'rails', '3.2.18'
   gem 'omniauth-google-oauth2'
   gem 'carrierwave'
   gem 'fog'
+  gem 'rails-gallery'
 
   group :development do
     gem 'pry-rails'
