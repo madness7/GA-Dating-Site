@@ -1,30 +1,31 @@
-<% if @user.image_1 %>
-<%= image_tag @user.image_1, width: 200 %>
+<% if current_user.image_1 %>
+<%= image_tag current_user.image_1, width: 200 %>
 <% end %>
 
 <p>
   <b>Name:</b>
-  <%= @user.first_name %><%= @user.last_name %>
+  <%= current_user.first_name %><%= current_user.last_name %>
 </p>
 
 <p>
   <b>Date of Birth</b>
-  <%= @user.dob %>
+  <%= current_user.dob %>
 </p>
 
 <p>
   <b>Gender</b>
-  <%= @user.gender %>
+  <%= current_user.gender %>
 </p>
 
 <p>
   <b>About me</b>
-  <%= @user.about_me %>
+  <%= current_user.about_me %>
 </p>
 
 <p>
   <b>Looking for</b>
-  <%= @user.looking_for %>
+  <%= current_user.looking_for %>
 </p>
 
+<%= link_to 'Other User', users_path %>
 

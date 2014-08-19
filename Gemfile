@@ -5,7 +5,7 @@ gem 'rails', '3.2.18'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
+  gem 'pg'
 
   gem 'therubyracer'
   gem 'less-rails-bootstrap'  
@@ -18,18 +18,18 @@ gem 'pg'
   gem 'fog'
 
   group :development do
-  gem 'pry-rails'
-  gem 'pry-stack_explorer'
-  gem 'binding_of_caller'
-  gem 'better_errors'
-  gem 'meta_request'
-  gem 'railroady'
-  gem 'rdoc'
-  gem 'annotate'
-  gem 'letter_opener'
-  gem 'html2haml'
-  gem 'yard'
-
+    gem 'pry-rails'
+    gem 'pry-stack_explorer'
+    gem 'binding_of_caller'
+    gem 'better_errors'
+    gem 'meta_request'
+    gem 'railroady'
+    gem 'rdoc'
+    gem 'annotate'
+    gem 'letter_opener'
+    gem 'html2haml'
+    gem 'yard'
+  end
   # Gems used only for assets and not required
   # in production environments by default.
   group :assets do
@@ -63,4 +63,3 @@ gem 'pg'
 
 # To use debugger
 # gem 'debugger'
-end
