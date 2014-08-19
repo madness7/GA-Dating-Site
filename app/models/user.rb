@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
   has_many :users, :through => :user_connections, :source => :user_2
   has_and_belongs_to_many :interests
 
+
   mount_uploader :image_1, Image1Uploader
   mount_uploader :image_2, Image2Uploader
   mount_uploader :image_3, Image3Uploader
@@ -53,7 +54,6 @@ class User < ActiveRecord::Base
           })
           
       else
-
         where(auth.slice(:provider, :uid)).first_or_create do |user|
             user.provider = auth.provider
             user.uid = auth.uid
@@ -61,12 +61,24 @@ class User < ActiveRecord::Base
             user.image_1 = auth.info.image
             user.password = Devise.friendly_token[0,20]
             # user.facebook_token = auth.credentials.token
-
-
-
         end
       end 
     end
   end
+
+  def self.other_users
+    find_by_sql("select * from users where id != current_user_id")
+  end
+
+  def self.same_looking_for ()
+    where("looking_for == current_user.gender")
+  end
+  def self.same_gender ()
+    where("gender == current_user.looking_for")
+  end
+
+
+
+
 end
 
