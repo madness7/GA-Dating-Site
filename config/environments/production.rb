@@ -64,7 +64,7 @@ DatingApp::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
-  config.action_mailer.default_url_options = { :host => 'example.com' }
+  config.action_mailer.default_url_options = { :host => 'http://glacial-sea-6112.herokuapp.com/' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = false
@@ -73,7 +73,8 @@ DatingApp::Application.configure do
   config.action_mailer.smtp_settings = {
     :address   => "smtp.mandrillapp.com",
     :port      => 25,
-    :user_name => "gac.curl@gmail.com",
-    :password  => "lSafKL5-ZP7pzUy-GyXl3w"
+    :user_name => ENV["mandrill_username"],
+    :password  => ENV["mandrill_password"]
 }
 end
+# 
