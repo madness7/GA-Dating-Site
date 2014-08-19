@@ -7,7 +7,7 @@ DatingApp::Application.routes.draw do
 
   # devise_for :users
   # resources :users
-  
+  devise_for :users, :controllers => { :registrations => "registrations" }
 
   devise_for :users, controllers: {omniauth_callbacks: "omniauth_callbacks" }
   resources :users
