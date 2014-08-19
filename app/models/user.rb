@@ -12,6 +12,12 @@ class User < ActiveRecord::Base
   has_many :users, :through => :user_connections, :source => :user_2
   has_and_belongs_to_many :interests
 
+   has_many(:chats, :foreign_key => :user_1_id, :dependent => :destroy)
+  has_many(:reverse_chats, :class_name => :Chat, :foreign_key => :user_2_id, :dependent => :destroy)
+  has_many :users, :through => :chats, :source => :user_2
+
+  has_many :posts, :through => :post_connections, :source => :post_b
+
   mount_uploader :image_1, Image1Uploader
   mount_uploader :image_2, Image2Uploader
   mount_uploader :image_3, Image3Uploader
