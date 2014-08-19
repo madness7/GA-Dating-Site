@@ -1,4 +1,10 @@
 DatingApp::Application.routes.draw do
+  resources :interests
+
+
+  resources :user_connections
+
+
   devise_for :users
   resources :users
 
