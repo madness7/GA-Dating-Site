@@ -40,8 +40,8 @@ class UserConnectionsController < ApplicationController
   # POST /user_connections
   # POST /user_connections.json
   def create
-    @user_connection = UserConnection.new(params[:user_connection])
-
+    @user_connection = UserConnection.new(params[:user_connections])
+    
     respond_to do |format|
       if @user_connection.save
         format.html { redirect_to @user_connection, notice: 'User connection was successfully created.' }

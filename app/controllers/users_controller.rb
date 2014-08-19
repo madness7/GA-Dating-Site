@@ -9,7 +9,6 @@ class UsersController < ApplicationController
     @users = @users.where(gender: current_user.looking_for)
     @users = @users.where(looking_for: current_user.gender)
     @user = @users.first
-    binding.pry
       respond_to do |format|
         format.html # index.html.erb
         format.json { render json: @match }

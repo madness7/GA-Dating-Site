@@ -1,3 +1,7 @@
+<%= hidden_field_tag("current_user", value = current_user.id.to_i) %>
+<%= hidden_field_tag("this_user", value = @user.id.to_i) %>
+
+
 
 <%= image_tag @user.image_1, width: 200 %>
 
@@ -25,3 +29,6 @@
   <b>Looking for</b>
   <%= @user.looking_for %>
 </p>
+
+<button id="hate">Dislike!</button>
+
