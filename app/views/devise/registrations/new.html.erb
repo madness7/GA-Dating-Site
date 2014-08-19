@@ -41,6 +41,8 @@
 
   <div><%= f.label :dob %><br />
   <%= f.date_select :dob, :start_year => Date.current.year, :end_year => 1920 %></div>
+<p>Interests</p>
+  <div><%= f.collection_select :interest_ids, Interest.all, :id, :name %></div>
 
   <div><%= f.label :password %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
     <%= f.password_field :password, autocomplete: "off" %></div>
