@@ -10,6 +10,11 @@ class UsersController < ApplicationController
     @users = @users.where(looking_for: current_user.gender)
     @user = @users.first
     @connections = current_user.user_connections
+    @connections.each do |c|
+      if c.user_2_id
+        @c=c.id
+      end
+    end
       respond_to do |format|
         format.html # index.html.erb
         format.json { render json: @match }

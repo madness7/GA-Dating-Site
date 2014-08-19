@@ -1,5 +1,7 @@
 <%= hidden_field_tag("current_user", value = current_user.id.to_i) %>
 <%= hidden_field_tag("this_user", value = @user.id.to_i) %>
+<%= hidden_field_tag("relationship", value = @c) %>
+
 
 
 
@@ -30,15 +32,6 @@
   <%= @user.looking_for %>
 </p>
 
-<% if @connections==[] %>
-  <button id="hate">Dislike!</button>
-<% else %>
-  <% @connections.each do |c|%>
-    <% if c.user_2_id == @user.id %>
-      <p>YOU HATE THIS PERSON!</p>
-    <% else %>
-      <button id="hate">Dislike!</button>
-    <% end %>
-  <% end %>
-<% end %>
+<button id="hate">Dislike!</button>
+
 

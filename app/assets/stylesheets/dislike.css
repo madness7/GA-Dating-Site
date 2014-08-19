@@ -1,0 +1,8 @@
+
+#hate {
+  background-color: green
+}
+
+#hate.hated {
+  background-color: red
+}
