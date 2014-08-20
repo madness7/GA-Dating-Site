@@ -1,8 +1,19 @@
 body {
-  background-image: url('sunset-homepage.jpg');
-  color: black;
+  background-image: url('beach2.jpg');
+  color: lightblue;
 }
 
+
 img {
-  border: solid lightblue 1px;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid lightblue 3px;
+}
+
+.profile {
+  text-align: center;
+}
+a {
+  color: red;
 }
