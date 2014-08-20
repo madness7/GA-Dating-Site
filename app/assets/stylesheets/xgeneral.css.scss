@@ -1,3 +1,23 @@
+
+body {
+  background-image: url('beach2.jpg');
+  color: lightblue;
+}
+
+
+img {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid lightblue 3px;
+}
+
+.profile {
+  text-align: center;
+}
+a {
+  color: red;
+
 .msg_slideshow{
   width:400px;
   height:400px;
@@ -168,4 +188,5 @@
   margin:-25px 0 0 -25px;
   z-index:25;
   display:none;
+
 }
