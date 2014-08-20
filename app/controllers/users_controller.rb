@@ -41,8 +41,8 @@ class UsersController < ApplicationController
     end
   end
 
-    def create
-    @user = User.new(params[:user])
+  def create
+  @user = User.new(params[:user])
 
     respond_to do |format|
       if @user.save
@@ -55,5 +55,6 @@ class UsersController < ApplicationController
       end
     end
   end
+
 
 end
