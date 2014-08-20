@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     @user = @users.shuffle.first
     @connections = current_user.user_connections
     @connections.each do |c|
-      if c.user_2_id
+      if c.user_2_id == @user.id
         @c=c.id
       end
     end
