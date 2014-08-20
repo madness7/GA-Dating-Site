@@ -16,7 +16,8 @@ gem 'rails', '3.2.18'
   gem 'carrierwave'
   gem 'fog'
   gem 'rails_12factor'
-  
+  gem 'rails-gallery'
+
 
   group :development do
     gem 'pry-rails'

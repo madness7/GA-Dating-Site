@@ -1,27 +1,69 @@
+<%= hidden_field_tag("current_user", value = current_user.id.to_i) %>
+<%= hidden_field_tag("this_user", value = @user.id.to_i) %>
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+ <script type="text/javascript" src="/assets/image_gallery.js"></script>
 
-<%= image_tag @match.image_1, width: 200 %>
+
+<%= image_tag @user.image_1, width: 200 %>
 
 <p>
   <b>Name:</b>
-  <%= @match.first_name %><%= @match.last_name %>
+  <%= @user.first_name %><%= @user.last_name %>
 </p>
 
 <p>
   <b>Date of Birth</b>
-  <%= @match.dob %>
+  <%= @user.dob %>
 </p>
 
 <p>
   <b>Gender</b>
-  <%= @match.gender %>
+  <%= @user.gender %>
 </p>
 
 <p>
   <b>About me</b>
-  <%= @match.about_me %>
+  <%= @user.about_me %>
 </p>
 
 <p>
   <b>Looking for</b>
-  <%= @match.looking_for %>
+  <%= @user.looking_for %>
 </p>
+
+<div class="content">
+  <div id="msg_slideshow" class="msg_slideshow">
+      <div id="msg_wrapper" class="msg_wrapper">
+        </div>
+      <div id="msg_controls" class="msg_controls"><!-- right has to animate to 15px, default -110px -->
+        
+        <a href="#" id="msg_prev" class="msg_prev"></a>
+        <a href="#" id="msg_pause_play" class="msg_pause"></a><!-- has to change to msg_play if paused-->
+        <a href="#" id="msg_next" class="msg_next"></a>
+      </div>
+      <div id="msg_thumbs" class="msg_thumbs"><!-- top has to animate to 0px, default -230px -->
+          <div class="msg_thumb_wrapper">
+          <a href="#"><%= image_tag @user.image_1, width: 200, alt:@user.image_1  %></a>
+          <a href="#"><%= image_tag @user.image_2, width: 200, alt:@user.image_2  %></a>
+          <a href="#"><%= image_tag @user.image_3, width: 200, alt:@user.image_3  %></a>
+          </div>
+        <a href="#" id="msg_thumb_next" class="msg_thumb_next"></a>
+        <a href="#" id="msg_thumb_prev" class="msg_thumb_prev"></a>
+        <a href="#" id="msg_thumb_close" class="msg_thumb_close"></a>
+        <span class="msg_loading"></span><!-- show when next thumb wrapper loading -->
+        </div>
+  </div>
+</div>
+
+<% if @connections==[] %>
+  <button id="hate">Dislike!</button>
+<% else %>
+  <% @connections.each do |c|%>
+    <% if c.user_2_id == @user.id %>
+      <p>YOU HATE THIS PERSON!</p>
+    <% else %>
+      <button id="hate">Dislike!</button>
+    <% end %>
+  <% end %>
+<% end %>
+

@@ -3,7 +3,6 @@ class UserConnectionsController < ApplicationController
   # GET /user_connections.json
   def index
     @user_connections = UserConnection.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @user_connections }
@@ -40,8 +39,8 @@ class UserConnectionsController < ApplicationController
   # POST /user_connections
   # POST /user_connections.json
   def create
-    @user_connection = UserConnection.new(params[:user_connection])
-
+    @user_connection = UserConnection.new(params[:user_connections])
+    
     respond_to do |format|
       if @user_connection.save
         format.html { redirect_to @user_connection, notice: 'User connection was successfully created.' }

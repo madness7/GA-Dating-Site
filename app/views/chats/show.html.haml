@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b User 1:
+  = @chat.user_1_id
+%p
+  %b User 2:
+  = @chat.user_2_id
+%p
+  %b Message:
+  = @chat.message
+
+= link_to 'Edit', edit_chat_path(@chat)
+\|
+= link_to 'Back', chats_path
