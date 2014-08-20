@@ -1,62 +1,93 @@
+<<<<<<< HEAD
 <%= hidden_field_tag("current_user", value = current_user.id.to_i) %>
+=======
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script type="text/javascript" src="/assets/image_gallery.js"></script>
 
+  <%= hidden_field_tag("current_user", value = current_user.id.to_i) %>
 
-<% if current_user.image_1 %>
-<%= image_tag current_user.image_1, width: 200 %>
-<% end %>
-
-<p class="profile">
-  <b>Name:</b>
-  <%= current_user.first_name %><%= current_user.last_name %>
-</p>
-
-<p class="profile">
-  <b>Date of Birth</b>
-  <%= current_user.dob %>
-</p>
-
-<p class="profile">
-  <b>Gender</b>
-  <%= current_user.gender %>
-</p>
-
-<p class="profile">
-  <b>About me</b>
-  <%= current_user.about_me %>
-</p>
-
-<p class="profile">
-  <b>Looking for</b>
-  <%= current_user.looking_for %>
-</p>
-
-<%= link_to 'Other User', users_path %>
-
-<div class="content">
-  <div id="msg_slideshow" class="msg_slideshow">
-      <div id="msg_wrapper" class="msg_wrapper">
-        </div>
-      <div id="msg_controls" class="msg_controls"><!-- right has to animate to 15px, default -110px -->
-        
-        <a href="#" id="msg_prev" class="msg_prev"></a>
-        <a href="#" id="msg_pause_play" class="msg_pause"></a><!-- has to change to msg_play if paused-->
-        <a href="#" id="msg_next" class="msg_next"></a>
+  <%= search_form_for @q do |f| %>
+    <!-- # this is  -->
+    <%= f.condition_fields do |c|%>
+      <div class="field">
+        <!-- # this is building the select option for all attributes of the model we working with: -->
+        <%= c.attribute_fields do |a| %> 
+          <%= a.attribute_select %>
+        <% end %>
+        <!-- # this gives us the select options for types of searches (predicates): -->
+        <%#= c.predicate_select %> 
+        <%= f.select :p, User::RANSACK_PREDICATES %>
+        <%= c.value_fields do |v| %>
+          <%= v.text_field :value %>
+        <% end %>
       </div>
-      <div id="msg_thumbs" class="msg_thumbs"><!-- top has to animate to 0px, default -230px -->
-          <div class="msg_thumb_wrapper">
-          <a href="#"><%= image_tag current_user.image_1, width: 200, alt:current_user.image_1  %></a>
-          <a href="#"><%= image_tag current_user.image_2, width: 200, alt:current_user.image_2  %></a>
-          <a href="#"><%= image_tag current_user.image_3, width: 200, alt:current_user.image_3  %></a>
-          </div>
-        <a href="#" id="msg_thumb_next" class="msg_thumb_next"></a>
-        <a href="#" id="msg_thumb_prev" class="msg_thumb_prev"></a>
-        <a href="#" id="msg_thumb_close" class="msg_thumb_close"></a>
-        <span class="msg_loading"></span><!-- show when next thumb wrapper loading -->
-        </div>
-  </div>
-</div>
+      <% end %>
+    <%= f.submit %>
+  <% end %>
+
+ <% if current_user.image_1 %>
+ <%= image_tag current_user.image_1, width: 200 %>
+ <% end %>
+
+ <p class="profile">
+   <b>Name:</b>
+   <%= current_user.first_name %><%= current_user.last_name %>
+ </p>
+
+ 
+ <p class="profile">
+   <b>Gender</b>
+   <%= current_user.gender %>
+ </p>
+ <p class="profile">
+   <b>Looking for</b>
+   <%= current_user.looking_for %>
+ </p>
+>>>>>>> ransack
+
+ <p class="profile">
+   <b>Date of Birth</b>
+   <%= current_user.dob %>
+ </p>
+
+ <p class="profile">
+   <b>About me</b>
+   <%= current_user.about_me %>
+ </p>
+
+ <%= link_to 'Other User', users_path %>
+
+ <div class="content">
+   <div id="msg_slideshow" class="msg_slideshow">
+       <div id="msg_wrapper" class="msg_wrapper">
+         </div>
+       <div id="msg_controls" class="msg_controls"><!-- right has to animate to 15px, default -110px -->
+         
+         <a href="#" id="msg_prev" class="msg_prev"></a>
+         <a href="#" id="msg_pause_play" class="msg_pause"></a><!-- has to change to msg_play if paused-->
+         <a href="#" id="msg_next" class="msg_next"></a>
+       </div>
+       <div id="msg_thumbs" class="msg_thumbs"><!-- top has to animate to 0px, default -230px -->
+           <div class="msg_thumb_wrapper">
+           <a href="#"><%= image_tag current_user.image_1, width: 200, alt:current_user.image_1  %></a>
+           <a href="#"><%= image_tag current_user.image_2, width: 200, alt:current_user.image_2  %></a>
+           <a href="#"><%= image_tag current_user.image_3, width: 200, alt:current_user.image_3  %></a>
+           </div>
+         <a href="#" id="msg_thumb_next" class="msg_thumb_next"></a>
+         <a href="#" id="msg_thumb_prev" class="msg_thumb_prev"></a>
+         <a href="#" id="msg_thumb_close" class="msg_thumb_close"></a>
+         <span class="msg_loading"></span><!-- show when next thumb wrapper loading -->
+         </div>
+   </div>
+ </div>
 
 
-     
-       
+      
+        
+
+
+
+
+      
+        
 

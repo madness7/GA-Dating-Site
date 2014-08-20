@@ -24,12 +24,20 @@ class UsersController < ApplicationController
     end
 
   def show
+    @q = User.search(params[:q])
+    @user_search = @q.result(distinct: true)
+    @q.build_condition
     @user = User.find(current_user.id)
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @user }
+    format.html # show.html.erb
+    format.json { render json: @user }
     end
+  end
+
+  def search
+    index
+    render :index
   end
 
   def new
