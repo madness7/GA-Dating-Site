@@ -40,7 +40,6 @@ class UserConnectionsController < ApplicationController
   # POST /user_connections.json
   def create
     @user_connection = UserConnection.new(params[:user_connections])
-    
     respond_to do |format|
       if @user_connection.save
         format.html { redirect_to @user_connection, notice: 'User connection was successfully created.' }
@@ -56,9 +55,8 @@ class UserConnectionsController < ApplicationController
   # PUT /user_connections/1.json
   def update
     @user_connection = UserConnection.find(params[:id])
-
     respond_to do |format|
-      if @user_connection.update_attributes(params[:user_connection])
+      if @user_connection.update_attributes(params[:user_connections])
         format.html { redirect_to @user_connection, notice: 'User connection was successfully updated.' }
         format.json { head :no_content }
       else
