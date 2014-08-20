@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 
-  RANSACK_PREDICATES = {"starts with" => :start, "contains" => :cont}
+  RANSACK_PREDICATES = {"starts with" => :start, "contains" => :cont, "matches" => :match, "equals" => :eq}
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
