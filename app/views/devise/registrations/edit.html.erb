@@ -42,6 +42,9 @@
   <div><%= f.label :dob %><br />
   <%= f.date_select :dob, :start_year => Date.current.year, :end_year => 1920 %></div>
 
+  <p>Interests</p>
+  <div><%= f.collection_select :interest_ids, Interest.all, :id, :name %></div>
+
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
