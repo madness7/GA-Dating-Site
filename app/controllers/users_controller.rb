@@ -6,8 +6,10 @@ class UsersController < ApplicationController
 
   def index
     @users = User.where("id != ?", current_user.id)
-    @users = @users.where(gender: current_user.looking_for)
-    @users = @users.where(looking_for: current_user.gender)
+  
+    @users = @users.looking(current_user.looking_for, current_user.gender)
+    @users = @users.interests(@users, current_user.interests[0].name)
+
     @user = @users.shuffle.first
     @connections = current_user.user_connections
     @connections.each do |c|
