@@ -23,6 +23,19 @@ class User < ActiveRecord::Base
   mount_uploader :image_1, Image1Uploader
   mount_uploader :image_2, Image2Uploader
   mount_uploader :image_3, Image3Uploader
+
+  
+     def self.interests(users, interest)
+   users.reject{|user| !user.interests.pluck(:name).include?(interest)}    
+    end
+
+
+
+    def self.looking(sex, target_sex)
+        self.where({gender: sex,looking_for: target_sex})
+    end
+
+
   
   def self.from_omniauth(auth)
     

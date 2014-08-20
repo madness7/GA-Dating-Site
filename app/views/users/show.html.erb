@@ -1,9 +1,4 @@
-
-
- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
- <script type="text/javascript" src="/assets/image_gallery.js"></script>
-
- <%= hidden_field_tag("current_user", value = current_user.id.to_i) %>
+<%= hidden_field_tag("current_user", value = current_user.id.to_i) %>
 
 
 <% if current_user.image_1 %>
