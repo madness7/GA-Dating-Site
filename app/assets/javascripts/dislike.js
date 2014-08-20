@@ -29,8 +29,8 @@ railsToDo.postNote = function(event){
       dataType: "json"
     }).success(function(data){
       if(data){
-      $('#relationship').val(data.id)
-    }
+        $('#relationship').val(data.id)
+      }
       railsToDo.getNotes()
     })
   }
@@ -41,14 +41,15 @@ railsToDo.getNotes = function(){
     $.ajax({
       url: "/user_connections/"+id,
       method: "GET",
-      dataType: "json"
-    }).success(function(data){
-      if(data.negative_connection==true){
-        $("#hate").addClass("hated")
-        $("#hate").val(true)
-      }else if(data.negative_connection==false){
-       $("#hate").removeClass("hated")
-       $("#hate").val(false) 
+      dataType: "json",
+      success: function(data){
+        if(data.negative_connection==true){
+          $("#hate").addClass("hated")
+          $("#hate").val(true)
+        }else if(data.negative_connection==false){
+         $("#hate").removeClass("hated")
+         $("#hate").val(false) 
+        }
       }
     })
   }
