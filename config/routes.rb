@@ -16,7 +16,7 @@ DatingApp::Application.routes.draw do
   
   resources :users
 
-  
+  match 'search', to: 'articles#search', via: [:get, :post], as: :search
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

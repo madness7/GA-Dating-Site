@@ -19,6 +19,7 @@ class UsersController < ApplicationController
   def show
     @q = User.search(params[:q])
     @user_search = @q.result(distinct: true)
+    @q.build_condition
     @user = User.find(current_user.id)
 
     respond_to do |format|
