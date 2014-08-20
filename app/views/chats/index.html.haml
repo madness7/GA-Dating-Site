@@ -1,23 +1,19 @@
-%h1 Listing chats
+= hidden_field_tag("chat", value = "chat")
+
+#new_note.form
+  = form_tag "", id: "post_chat" do |f|
+    = hidden_field_tag("current_user", value = current_user.id.to_i)
+    = hidden_field_tag("this_user", value = @user_id.to_i)
+    .field
+      = text_field_tag :message
+    .actions
+      = submit_tag value = "Submit"
 
 %table
-  %tr
-    %th User 1
-    %th User 2
-    %th Message
-    %th
-    %th
-    %th
-
-  - @chats.each do |chat|
+  %thead
     %tr
-      %td= chat.user_1_id
-      %td= chat.user_2_id
-      %td= chat.message
-      %td= link_to 'Show', chat
-      %td= link_to 'Edit', edit_chat_path(chat)
-      %td= link_to 'Destroy', chat, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %th Username
+      %th Message
 
-%br
-
-= link_to 'New Chat', new_chat_path
+  %tbody
+    %tr

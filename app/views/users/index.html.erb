@@ -2,11 +2,6 @@
 <%= hidden_field_tag("this_user", value = @user.id.to_i) %>
 <%= hidden_field_tag("relationship", value = @c) %>
 
-
-
-
-
-
 <%= image_tag @user.image_1, width: 200 %>
 
 <p>
@@ -60,4 +55,4 @@
 
 <button id="hate">Dislike!</button>
 
-
+<%= link_to "Chat", chats_path(:user => @user.id) %>
