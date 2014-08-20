@@ -25,27 +25,20 @@ class User < ActiveRecord::Base
   mount_uploader :image_1, Image1Uploader
   mount_uploader :image_2, Image2Uploader
   mount_uploader :image_3, Image3Uploader
-
-<<<<<<< HEAD
   
      def self.interests(users, interest)
    users.reject{|user| !user.interests.pluck(:name).include?(interest)}    
     end
 
-
-
     def self.looking(sex, target_sex)
         self.where({gender: sex,looking_for: target_sex})
     end
 
-
-=======
   UNRANSACKABLE_ATTRIBUTES = ["reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "dob", "image_1", "image_2", "image_3", "profile_pic", "uid", "provider", "updated_at", "unconfirmed_email", "confirmation_sent_at", "confirmed_at", "confirmation_token", "last_sign_in_ip", "current_sign_in_ip", "last_sign_in_at",  "current_sign_in_at", "sign_in_count", "encrypted_password", "user_id", "id", "about_me"  ]
 
   def self.ransackable_attributes auth_object = nil
       (column_names - UNRANSACKABLE_ATTRIBUTES) + _ransackers.keys
   end
->>>>>>> ransack
   
   def self.from_omniauth(auth)
     
