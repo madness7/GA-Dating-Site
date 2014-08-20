@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @users = User.where("id != ?", current_user.id)
     @users = @users.where(gender: current_user.looking_for)
     @users = @users.where(looking_for: current_user.gender)
-    @user = @users.first
+    @user = @users.shuffle.first
     @connections = current_user.user_connections
       respond_to do |format|
         format.html # index.html.erb
