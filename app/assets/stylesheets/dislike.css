@@ -6,3 +6,9 @@
 #hate.hated {
   background-color: red
 }
+#chat {
+  display: inline;
+}
+#chat.hidden{
+  display: none;
+}

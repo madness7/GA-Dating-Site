@@ -55,4 +55,4 @@
 
 <button id="hate">Dislike!</button>
 
-<%= link_to "Chat", chats_path(:id => @user.id, :name => @user.first_name) %>
+<%= link_to "Chat", chats_path(:id => @user.id, :name => @user.first_name), :id => "chat" %>

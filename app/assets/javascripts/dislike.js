@@ -46,9 +46,11 @@ railsToDo.getNotes = function(){
         if(data.negative_connection==true){
           $("#hate").addClass("hated")
           $("#hate").val(true)
+          $("#chat").addClass("hidden")
         }else if(data.negative_connection==false){
          $("#hate").removeClass("hated")
          $("#hate").val(false) 
+         $("#chat").removeClass("hidden")
         }
       }
     })
