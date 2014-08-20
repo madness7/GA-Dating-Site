@@ -2,7 +2,8 @@ class ChatsController < ApplicationController
   # GET /chats
   # GET /chats.json
   def index
-    @user_id = params[:user]
+    @user_id = params[:id]
+    @user_name = params[:name]
     @chats = Chat.all
 
     respond_to do |format|

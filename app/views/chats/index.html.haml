@@ -3,7 +3,9 @@
 #new_note.form
   = form_tag "", id: "post_chat" do |f|
     = hidden_field_tag("current_user", value = current_user.id.to_i)
+    = hidden_field_tag("current_user_name", value = current_user.first_name)
     = hidden_field_tag("this_user", value = @user_id.to_i)
+    = hidden_field_tag("this_user_name", value = @user_name)
     .field
       = text_field_tag :message
     .actions
@@ -12,7 +14,7 @@
 %table
   %thead
     %tr
-      %th Username
+      %th Sender
       %th Message
 
   %tbody

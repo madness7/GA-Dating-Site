@@ -9,13 +9,13 @@ railsChat.getNotes = function(){
       if(chat.user_1_id == $('#current_user').val()){
         if(chat.user_2_id == $('#this_user').val()){
         var row = $("<tr>"+
-        "<td>"+ chat.user_1_id +"</td>"+
+        "<td>"+ $("#current_user_name").val() +"</td>"+
         "<td>"+ chat.message +"</td></tr>")
       row.appendTo("table tbody")}
     }else if(chat.user_1_id == $('#this_user').val()){
       if(chat.user_2_id == $('#current_user').val()){
           var row = $("<tr>"+
-          "<td>"+ chat.user_1_id +"</td>"+
+          "<td>"+ $("#this_user_name").val() +"</td>"+
           "<td>"+ chat.message +"</td></tr>")
         row.appendTo("table tbody")}
     }
@@ -41,6 +41,7 @@ railsChat.updateRegularly = function() {
 }
 
 $(function(){
+  railsChat.getNotes()
   if($("#chat").val()){
     railsChat.updateRegularly();
   }
