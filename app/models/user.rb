@@ -23,6 +23,9 @@ class User < ActiveRecord::Base
   mount_uploader :image_1, Image1Uploader
   mount_uploader :image_2, Image2Uploader
   mount_uploader :image_3, Image3Uploader
+
+  #SCOPES#
+  scope :looking_for
   
   def self.from_omniauth(auth)
     
