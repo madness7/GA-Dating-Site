@@ -18,18 +18,11 @@ class UsersController < ApplicationController
       @users = @users.looking(current_user.looking_for, current_user.gender)
       @users = @users.interests(@users, current_user.interests[0].name)
       @user = @users.shuffle.first
+      puts 'p' * 90 
+      puts @user
+      puts @user.id
     end
-    puts '-' * 90 
-    puts @user
-    puts @user.id
-    puts @user.last_name
-    puts @user.dob
-    puts @user.gender
-    puts @user.about_me
-    puts @user.looking_for
-    puts @user.image_1
-    puts @user.image_2
-    puts @user.image_3
+    
     @connections = current_user.user_connections
     @connections.each do |c|
       if c.user_2_id == @user.id
