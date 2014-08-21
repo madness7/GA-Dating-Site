@@ -11,7 +11,22 @@ class UsersController < ApplicationController
       puts 'I am inside the if statment'
       @user = User.find(params[:id])
     else
-      @user = User.first
+      puts '-' * 90 
+      puts current_user
+      puts current_user.id
+      users1 = User.where("id != ?", current_user.id)
+      puts '1' * 90 
+      puts users1
+      users2 = users1.looking(current_user.looking_for, current_user.gender)
+      puts '2' * 90 
+      puts users2
+      users3 = users2.interests(users2, current_user.interests[0].name)
+      puts '3' * 90 
+      puts users3
+      @user = users3.shuffle.first
+      puts '4' * 90 
+      puts @user
+      puts @user.id
     end
     
     @connections = current_user.user_connections
@@ -50,7 +65,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        UserMailer.registration_confirmation(@user).deliver
+        UserMailer.registration_confirmation(@user).deliver 
         format.html { redirect_to @user, notice: 'User connection was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }
       else

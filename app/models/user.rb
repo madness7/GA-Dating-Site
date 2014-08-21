@@ -42,12 +42,12 @@ class User < ActiveRecord::Base
       end
     end
 
-    validates :first_name, presence: true
-    validates :last_name, presence: true
-    validates :image_1, presence: true
-    validates :image_2, presence: true
-    validates :image_3, presence: true
-    validates :about_me, presence: true
+    # validates :first_name, presence: true
+    # validates :last_name, presence: true
+    # validates :image_1, presence: true
+    # validates :image_2, presence: true
+    # validates :image_3, presence: true
+    # validates :about_me, presence: true
 
   UNRANSACKABLE_ATTRIBUTES = ["reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "dob", "image_1", "image_2", "image_3", "profile_pic", "uid", "provider", "updated_at", "unconfirmed_email", "confirmation_sent_at", "confirmed_at", "confirmation_token", "last_sign_in_ip", "current_sign_in_ip", "last_sign_in_at",  "current_sign_in_at", "sign_in_count", "encrypted_password", "user_id", "id", "about_me"  ]
 

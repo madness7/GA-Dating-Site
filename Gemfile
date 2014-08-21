@@ -18,6 +18,7 @@ gem 'rails', '3.2.18'
   gem 'rails_12factor'
   gem 'rails-gallery'
   gem 'ransack'
+  gem 'mandrill_mailer'
 
 
   group :development do
