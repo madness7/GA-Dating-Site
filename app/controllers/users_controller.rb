@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   def index
     puts params 
     puts '-' * 90 
-    if params[:id] != 'undefined'
+    if params[:id] && params[:id] != 'undefined'
       puts 'I am inside the if statment'
       @user = User.find(params[:id])
     else
