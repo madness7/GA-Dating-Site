@@ -74,7 +74,6 @@ DatingApp::Application.configure do
     :address   => "smtp.mandrillapp.com",
     :port      => 587,
     :user_name => ENV["mandrill_username"],
-    :password  => ENV["mandrill_password"],
-    :domain => 'heroku.com'
-}
+    :password  => ENV["mandrill_password"]
+  }
 end
