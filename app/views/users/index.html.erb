@@ -1,8 +1,8 @@
-<%#= hidden_field_tag("current_user", value = current_user.id.to_i) %>
-<%= hidden_field_tag("this_user", value = @user.id) %>
-<%#= hidden_field_tag("relationship", value = @c) %>
+<%= hidden_field_tag("current_user", value = current_user.id.to_i) %>
+<%= hidden_field_tag("this_user", value = @user.id.to_i) %>
+<%= hidden_field_tag("relationship", value = @c) %>
 
-<%#= image_tag @user.image_1, width: 200 %>
+<%= image_tag @user.image_1, width: 200 %>
 
 <p>
   <b>Name:</b>
