@@ -11,6 +11,8 @@ class UsersController < ApplicationController
       puts 'I am inside the if statment'
       @user = User.find(params[:id])
     else
+      puts '-' * 90 
+      puts current_user
       @users = User.where("id != ?", current_user.id)
       @users = @users.looking(current_user.looking_for, current_user.gender)
       @users = @users.interests(@users, current_user.interests[0].name)
