@@ -72,10 +72,9 @@ DatingApp::Application.configure do
 
   config.action_mailer.smtp_settings = {
     :address   => "smtp.mandrillapp.com",
-    :port      => 25,
+    :port      => 587,
     :user_name => ENV["mandrill_username"],
     :password  => ENV["mandrill_password"],
     :domain => 'heroku.com'
 }
 end
-# http://glacial-sea-6112.herokuapp.com/
