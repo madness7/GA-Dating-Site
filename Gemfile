@@ -19,7 +19,7 @@ gem 'rails', '3.2.18'
   gem 'rails-gallery'
   gem 'ransack'
   gem 'mandrill_mailer'
-
+  
 
   group :development do
     gem 'pry-rails'
