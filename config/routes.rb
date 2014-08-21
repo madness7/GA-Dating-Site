@@ -15,7 +15,7 @@ DatingApp::Application.routes.draw do
 
   
   resources :users
-
+  get '/connections', to: 'users#connections'
   
 
   # The priority is based upon order of creation:

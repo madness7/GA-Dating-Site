@@ -55,6 +55,10 @@ class UsersController < ApplicationController
       end
     end
   end
+  def connections
+    @users = UserConnection.where(user_2_id: current_user.id)
+
+  end
 
 
 end
