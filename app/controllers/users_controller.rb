@@ -11,22 +11,10 @@ class UsersController < ApplicationController
       puts 'I am inside the if statment'
       @user = User.find(params[:id])
     else
-      puts '-' * 90 
-      puts current_user
-      puts current_user.id
-      users1 = User.where("id != ?", current_user.id)
-      puts '1' * 90 
-      puts users1
-      users2 = users1.looking(current_user.looking_for, current_user.gender)
-      puts '2' * 90 
-      puts users2
-      users3 = users2.interests(users2, current_user.interests[0].name)
-      puts '3' * 90 
-      puts users3
-      @user = users3.shuffle.first
-      puts '4' * 90 
-      puts @user
-      puts @user.id
+      @users = User.where("id != ?", current_user.id)
+            @users = @users.looking(current_user.looking_for, current_user.gender)
+            @users = @users.interests(@users, current_user.interests[0].name)
+            @user = @users.shuffle.first
     end
     
     @connections = current_user.user_connections
@@ -62,19 +50,7 @@ class UsersController < ApplicationController
 
   def create
   binding.pry
-  @user = User.new(params[:user])
-    respond_to do |format|
-      if @user.save
-        UserMailer.registration_confirmation(@user).deliver 
-        puts "-" * 90
-        puts UserMailer.registration_confirmation(@user).deliver 
-        format.html { redirect_to @users, notice: 'User connection was successfully created.' }
-        format.json { render json: @user, status: :created, location: @user }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
-    end
+  
   end
   def connections
     if params[:search]
