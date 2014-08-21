@@ -18,6 +18,9 @@ DatingApp::Application.routes.draw do
 
   match 'search', to: 'articles#search', via: [:get, :post], as: :search
 
+  get '/connections', to: 'users#connections'
+  
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 root to: "users#show"

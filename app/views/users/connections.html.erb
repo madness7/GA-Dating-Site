@@ -1,0 +1,4 @@
+<% @users.each do |user| %>
+  </br>
+  <%= link_to User.find(user.user_1_id).first_name, users_path(:id => user.user_1_id ) %>
+<% end %>

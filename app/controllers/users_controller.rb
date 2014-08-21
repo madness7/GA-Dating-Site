@@ -49,8 +49,8 @@ class UsersController < ApplicationController
     end
   end
 
-    def create
-    @user = User.new(params[:user])
+  def create
+  @user = User.new(params[:user])
 
     respond_to do |format|
       if @user.save
@@ -63,5 +63,10 @@ class UsersController < ApplicationController
       end
     end
   end
+  def connections
+    @users = UserConnection.where(user_2_id: current_user.id)
+
+  end
+
 
 end

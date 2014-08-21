@@ -6,3 +6,19 @@
 #hate.hated {
   background-color: red
 }
+#hate.hidden{
+  display: none;
+}
+
+#chat {
+  display: inline;
+}
+#chat.hidden{
+  display: none;
+}
+#like {
+  background-color: gray;
+}
+#like.liked {
+  background-color: green;
+}
