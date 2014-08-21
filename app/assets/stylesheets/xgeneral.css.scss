@@ -1,26 +1,74 @@
-
+* {
+  box-sizing: border-box;
+}
 body {
-  background-image: url('beach2.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: lightblue;
+background-color: black;
+color: lightblue;
+width: 980px;
+border: solid white 1px;
+margin: auto;
+}
+
+header {
+  margin-bottom: 5em;
+}
+
+li {
+  list-style: none;
+}
+
+#nav_bar {
+    display:block;
+    text-align: center;
+    font-size: 3em;
+
 }
 
 img {
-  display:block;
+  display:inline-block;
   margin-left: auto;
   margin-right: auto;
-  border: solid lightblue 3px;
+  border: solid white 3px;
 }
 
-.profile {
+.basic {
+ border: solid white 1px;
+ margin-right: 10px;
+ display: inline-block;
+ width: 200px;
+ height: 200px;
+ vertical-align: top;
+ padding: 5px;
+}
+.info_box {
   text-align: center;
 }
-a {
+
+.profile_image {
+  display: inline-block;
+  height: 200px;
+
+}
+.profile_image img {
+
+}
+.profile {
+  text-align: left;
+
+}
+
+#about_me {
   color: red;
+  text-align:center;
+  border: solid white 1px;
+}
+a {
+  color: green;
+  text-decoration: none
   }
 
 .msg_slideshow{
+  margin: auto;
   width:400px;
   height:400px;
   padding:10px;
@@ -35,7 +83,7 @@ a {
   outline:none;
 }
 .msg_slideshow a img{
-  border:none;
+  border: solid white 1px;
 }
 .msg_wrapper{
   width:400px;
@@ -46,6 +94,8 @@ a {
   display:table-cell;
   text-align:center;
   vertical-align:middle;
+  border: solid white 1px;
+
 }
 .msg_wrapper img{
   display: inline-block!important;

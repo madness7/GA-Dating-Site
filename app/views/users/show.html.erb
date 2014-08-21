@@ -1,39 +1,44 @@
 
 <%= hidden_field_tag("current_user", value = current_user.id.to_i) %>
-<%= hidden_field_tag("current_user", value = current_user.id.to_i) %>
 
-
-
+ <div class="info_box">
  <% if current_user.image_1 %>
- <%= image_tag current_user.image_1, width: 200 %>
+  <div class="profile_image">
+    <%= image_tag current_user.image_1, width: 200 %>
+  </div>
  <% end %>
 
- <p class="profile">
-   <b>Name:</b>
-   <%= current_user.first_name %><%= current_user.last_name %>
- </p>
+   <div class="basic">
+      <p class="profile">
+      <b>Name:</b>
+      <%= current_user.first_name %><%= current_user.last_name %>
+      </p>
 
- 
- <p class="profile">
-   <b>Gender</b>
-   <%= current_user.gender %>
- </p>
- <p class="profile">
-   <b>Looking for</b>
-   <%= current_user.looking_for %>
- </p>
+   <p class="profile">
+     <b>Gender</b>
+     <%= current_user.gender %>
+   </p>
+   <p class="profile">
+     <b>Looking for</b>
+     <%= current_user.looking_for %>
+   </p>
 
- <p class="profile">
-   <b>Date of Birth</b>
-   <%= current_user.dob %>
- </p>
+   <p class="profile">
+     <b>Date of Birth</b>
+     <%= current_user.dob %>
+   </p>
+  <button><%= link_to 'Random Partner Search', users_path %></button>
 
- <p class="profile">
+   </div>
+</div>
+
+
+ <p id="about_me" class="profile">
    <b>About me</b>
    <%= current_user.about_me %>
  </p>
 
- <%= link_to 'Other User', users_path %>
+ 
 
  <div class="content">
    <div id="msg_slideshow" class="msg_slideshow">

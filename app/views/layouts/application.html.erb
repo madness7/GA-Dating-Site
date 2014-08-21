@@ -6,35 +6,32 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-  
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
 
-  <% if user_signed_in? %>
-    <%= current_user.email %>
+  <body>
+    <header>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
+      <% if user_signed_in? %>
+      <%= current_user.email %>
+
     </br>
-    <%= link_to "Edit Profile", edit_user_registration_path %>
-    </br>
-    <%= link_to "Home", root_path %>
-    </br>
-    <%= link_to "Connections", connections_path %>
-    </br>
-    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-    </br>
-    <%= form_tag connections_path, :method => 'get' do %>
-      <p>
-        <%= text_field_tag :search, params[:search], placeholder: "Search by name..." %>
-        <%= submit_tag "Search", :name => nil %>
-      </p>
-    <% end %>
-    <% else %>
-    <%= link_to "Sign Up", new_user_registration_path %>
-    </br>
+    <nav id="nav_bar">
+      <a><%= link_to "Connections", connections_path %></a>
+      <a><%= link_to "Home", root_path %></a>
+      <a><%= link_to "Edit Profile", edit_user_registration_path %></a>
+      <a><%= link_to "Logout", destroy_user_session_path, method: :delete %></a>
+      <a><%= text_field_tag :search, params[:search], placeholder: "Search by name..." %><%= submit_tag "Search", :name => nil %></a>
+      <% else %>
+      <a><%= link_to "Sign Up", new_user_registration_path %></a>
+    </nav>
+
     <%= link_to "Login", new_user_session_path %>
-  <% end %>
 
-<%= yield %>
+    <% end %>
+    
+  </header>
+  <%= yield %>
 
 </body>
 </html>
