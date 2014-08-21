@@ -61,12 +61,14 @@ class UsersController < ApplicationController
   end
 
   def create
+  binding.pry
   @user = User.new(params[:user])
-
     respond_to do |format|
       if @user.save
         UserMailer.registration_confirmation(@user).deliver 
-        format.html { redirect_to @user, notice: 'User connection was successfully created.' }
+        puts "-" * 90
+        puts UserMailer.registration_confirmation(@user).deliver 
+        format.html { redirect_to @users, notice: 'User connection was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: "new" }
