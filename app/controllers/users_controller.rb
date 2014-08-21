@@ -5,7 +5,7 @@ class UsersController < ApplicationController
  
 
   def index
-    if params[:id]
+    if params[:id] != 'undefined'
       @user = User.find(params[:id])
     else
       @users = User.where("id != ?", current_user.id)
