@@ -7,17 +7,29 @@ class UsersController < ApplicationController
   def index
     puts params 
     puts '-' * 90 
-    if params[:id] && params[:id] != 'undefined'
+    if params[:id] 
       puts 'I am inside the if statment'
       @user = User.find(params[:id])
     else
       puts '-' * 90 
       puts current_user
+      puts current_user.id
       @users = User.where("id != ?", current_user.id)
       @users = @users.looking(current_user.looking_for, current_user.gender)
       @users = @users.interests(@users, current_user.interests[0].name)
       @user = @users.shuffle.first
     end
+    puts '-' * 90 
+    puts @user
+    puts @user.id
+    puts @user.last_name
+    puts @user.dob
+    puts @user.gender
+    puts @user.about_me
+    puts @user.looking_for
+    puts @user.image_1
+    puts @user.image_2
+    puts @user.image_3
     @connections = current_user.user_connections
     @connections.each do |c|
       if c.user_2_id == @user.id
