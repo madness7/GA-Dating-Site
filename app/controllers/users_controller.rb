@@ -15,8 +15,14 @@ class UsersController < ApplicationController
       puts current_user
       puts current_user.id
       @users = User.where("id != ?", current_user.id)
+      puts '1' * 90 
+      puts @users
       @users = @users.looking(current_user.looking_for, current_user.gender)
+      puts '2' * 90 
+      puts @users
       @users = @users.interests(@users, current_user.interests[0].name)
+      puts '3' * 90 
+      puts @users
       @user = @users.shuffle.first
       puts 'p' * 90 
       puts @user
