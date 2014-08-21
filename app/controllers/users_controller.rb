@@ -5,7 +5,10 @@ class UsersController < ApplicationController
  
 
   def index
+    puts params 
+    puts '-' * 90 
     if params[:id] != 'undefined'
+      puts 'I am inside the if statment'
       @user = User.find(params[:id])
     else
       @users = User.where("id != ?", current_user.id)
