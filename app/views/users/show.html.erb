@@ -1,26 +1,8 @@
 
 <%= hidden_field_tag("current_user", value = current_user.id.to_i) %>
+<%= hidden_field_tag("current_user", value = current_user.id.to_i) %>
 
-  <%= hidden_field_tag("current_user", value = current_user.id.to_i) %>
 
-  <%= search_form_for @q do |f| %>
-    <!-- # this is  -->
-    <%= f.condition_fields do |c|%>
-      <div class="field">
-        <!-- # this is building the select option for all attributes of the model we working with: -->
-        <%= c.attribute_fields do |a| %> 
-          <%= a.attribute_select %>
-        <% end %>
-        <!-- # this gives us the select options for types of searches (predicates): -->
-        <%#= c.predicate_select %> 
-        <%= f.select :p, User::RANSACK_PREDICATES %>
-        <%= c.value_fields do |v| %>
-          <%= v.text_field :value %>
-        <% end %>
-      </div>
-      <% end %>
-    <%= f.submit %>
-  <% end %>
 
  <% if current_user.image_1 %>
  <%= image_tag current_user.image_1, width: 200 %>

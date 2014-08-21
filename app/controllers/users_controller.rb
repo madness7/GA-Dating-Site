@@ -5,12 +5,14 @@ class UsersController < ApplicationController
  
 
   def index
-    @users = User.where("id != ?", current_user.id)
-  
-    @users = @users.looking(current_user.looking_for, current_user.gender)
-    @users = @users.interests(@users, current_user.interests[0].name)
-
-    @user = @users.shuffle.first
+    if params[:id]
+      @user = User.find(params[:id])
+    else
+      @users = User.where("id != ?", current_user.id)
+      @users = @users.looking(current_user.looking_for, current_user.gender)
+      @users = @users.interests(@users, current_user.interests[0].name)
+      @user = @users.shuffle.first
+    end
     @connections = current_user.user_connections
     @connections.each do |c|
       if c.user_2_id == @user.id
@@ -24,20 +26,13 @@ class UsersController < ApplicationController
     end
 
   def show
-    @q = User.search(params[:q])
-    @user_search = @q.result(distinct: true)
-    @q.build_condition
+
     @user = User.find(current_user.id)
 
     respond_to do |format|
     format.html # show.html.erb
     format.json { render json: @user }
     end
-  end
-
-  def search
-    index
-    render :index
   end
 
   def new
@@ -64,8 +59,11 @@ class UsersController < ApplicationController
     end
   end
   def connections
-    @users = UserConnection.where(user_2_id: current_user.id)
-
+    if params[:search]
+      @users = User.search(params[:search])
+    else
+      @user_connections = UserConnection.where(user_2_id: current_user.id)
+    end
   end
 
 

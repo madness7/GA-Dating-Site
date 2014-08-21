@@ -1,4 +1,24 @@
-<% @users.each do |user| %>
-  </br>
-  <%= link_to User.find(user.user_1_id).first_name, users_path(:id => user.user_1_id ) %>
+  
+<% if @user_connections %>
+  <% @user_connections.each do |user| %>
+    </br>
+    <%= link_to users_path(:id => user.user_1_id ) do %>
+      <% if User.find(user.user_1_id).image_1.path %>
+        <%= image_tag User.find(user.user_1_id).image_1, width: 200 %>
+      <% else %>
+        <%= image_tag 'http://onlinelearninginsights.files.wordpress.com/2012/06/facebook-avatar.png', width: 200 %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% elsif @users %>
+  <% @users.each do |user| %>
+    </br>
+    <%= link_to users_path(:id => user.id ) do %>
+      <% if user.image_1.path %>
+        <%= image_tag user.image_1, width: 200 %>
+      <% else %>
+        <%= image_tag 'http://onlinelearninginsights.files.wordpress.com/2012/06/facebook-avatar.png', width: 200 %>
+      <% end %>
+    <% end %>
+  <% end %>
 <% end %>
