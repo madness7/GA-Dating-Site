@@ -1,9 +1,10 @@
 
 body {
   background-image: url('beach2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   color: lightblue;
 }
-
 
 img {
   display:block;
@@ -17,7 +18,8 @@ img {
 }
 a {
   color: red;
-}
+  }
+
 .msg_slideshow{
   width:400px;
   height:400px;
