@@ -75,6 +75,7 @@ DatingApp::Application.configure do
     :port      => 25,
     :user_name => ENV["mandrill_username"],
     :password  => ENV["mandrill_password"]
+    :domain => 'heroku.com'
 }
 end
 # http://glacial-sea-6112.herokuapp.com/
