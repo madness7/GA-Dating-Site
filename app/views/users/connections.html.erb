@@ -1,4 +1,16 @@
-<% @users.each do |user| %>
-  </br>
-  <%= link_to User.find(user.user_1_id).first_name, users_path(:id => user.user_1_id ) %>
+  
+<% if @user_connections %>
+  <% @user_connections.each do |user| %>
+    </br>
+    <%= link_to users_path(:id => user.user_1_id ) do %>
+      <%= image_tag User.find(user.user_1_id).image_1, width: 200 %>
+    <% end %>
+  <% end %>
+<% elsif @users %>
+  <% @users.each do |user| %>
+    </br>
+    <%= link_to users_path(:id => user.id ) do %>
+      <%= image_tag user.image_1, width: 200 %>
+    <% end %>
+  <% end %>
 <% end %>

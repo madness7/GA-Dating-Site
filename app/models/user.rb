@@ -34,6 +34,14 @@ class User < ActiveRecord::Base
         self.where({gender: sex,looking_for: target_sex})
     end
 
+    def self.search(search)
+      if search
+        find(:all, :conditions => ['first_name LIKE ?', "%#{search}%"])
+      else
+        find(:all)
+      end
+    end
+
   UNRANSACKABLE_ATTRIBUTES = ["reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "dob", "image_1", "image_2", "image_3", "profile_pic", "uid", "provider", "updated_at", "unconfirmed_email", "confirmation_sent_at", "confirmed_at", "confirmation_token", "last_sign_in_ip", "current_sign_in_ip", "last_sign_in_at",  "current_sign_in_at", "sign_in_count", "encrypted_password", "user_id", "id", "about_me"  ]
 
   def self.ransackable_attributes auth_object = nil
