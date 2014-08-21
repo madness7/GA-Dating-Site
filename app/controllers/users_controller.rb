@@ -20,7 +20,7 @@ class UsersController < ApplicationController
       users2 = users1.looking(current_user.looking_for, current_user.gender)
       puts '2' * 90 
       puts users2
-      users3 = users2.interests(@users, current_user.interests[0].name)
+      users3 = users2.interests(users2, current_user.interests[0].name)
       puts '3' * 90 
       puts users3
       @user = users3.shuffle.first
