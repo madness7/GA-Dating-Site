@@ -17,6 +17,7 @@ gem 'rails', '3.2.18'
   gem 'fog'
   gem 'rails_12factor'
   gem 'rails-gallery'
+  gem 'ransack'
 
 
   group :development do
