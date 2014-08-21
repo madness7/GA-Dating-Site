@@ -24,7 +24,7 @@
     </br>
     <%= form_tag connections_path, :method => 'get' do %>
       <p>
-        <%= text_field_tag :search, params[:search] %>
+        <%= text_field_tag :search, params[:search], placeholder: "Search by name..." %>
         <%= submit_tag "Search", :name => nil %>
       </p>
     <% end %>
