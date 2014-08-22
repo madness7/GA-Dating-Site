@@ -4,8 +4,10 @@
 
 html {
   background-image: url('paris.jpg');
-  background-size: contain;
+  /*background-size: contain;*/
   background-attachment: fixed;
+  background-repeat: no-repeat;
+   background-size: 100%;
   /*background-position: top center;*/
 
 }
