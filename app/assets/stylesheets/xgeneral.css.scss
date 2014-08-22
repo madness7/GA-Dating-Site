@@ -4,9 +4,9 @@
 
 html {
   background-image: url('paris.jpg');
- /* background-repeat: no-repeat;*/
   background-size: contain;
-  /*bachground-size: cover;*/
+  background-attachment: fixed;
+  /*background-position: top center;*/
 
 }
 body {
@@ -113,7 +113,7 @@ a:hover, a:active {
   padding:10px;
   position:relative;
   overflow:hidden;
-  background:#101010 url(../icons/loading.gif) no-repeat center center;
+  background: white url(../icons/loading.gif) no-repeat center center;
   -moz-border-radius:10px;
   -webkit-border-radius:10px;
   border-radius:10px;
@@ -122,12 +122,12 @@ a:hover, a:active {
   outline:none;
 }
 .msg_slideshow a img{
-  border: solid white 1px;
+  border: solid black 1px;
 }
 .msg_wrapper{
   width:400px;
   height:400px;
-  background-color: rosybrown;
+  background-color: black;
   position:relative;
   margin:0;
   padding:0;
@@ -160,7 +160,7 @@ a:hover, a:active {
 }
 .msg_controls a{
   float:left;
-  background-color:#000;
+  background-color:#fff, 0.3;
   width:20px;
   height:20px;
   margin:3px 3px;
