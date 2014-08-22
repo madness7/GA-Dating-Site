@@ -1,3 +1,4 @@
+<!-- hidden fields used to find the connection between the two users -->
 <%= hidden_field_tag("current_user", value = current_user.id.to_i) %>
 <%= hidden_field_tag("this_user", value = @user.id.to_i) %>
 <%= hidden_field_tag("relationship", value = @c) %>

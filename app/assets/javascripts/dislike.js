@@ -1,9 +1,10 @@
+// defining a changeable relationship between users
 var railsToDo = railsToDo || {};
 
 railsToDo.fields = ["user_1_id", "user_2_id", "negative_connection"]
 var id = $('#relationship').val()
 
-
+// for the like button we are checking if there is a connection, if not post, otherwise put.  if true then cannot have negative connection.  connection is defined as positive initally.
 railsToDo.likeNote = function(event){
   event.preventDefault();
   var id = $('#relationship').val()
@@ -33,7 +34,7 @@ railsToDo.likeNote = function(event){
     railsToDo.getNotes()
   })
 }
-
+// defining the negative connection .  this removes the chat ability if pressed.
 railsToDo.postNote = function(event){
   event.preventDefault();
   var id = $('#relationship').val()
@@ -67,7 +68,7 @@ railsToDo.postNote = function(event){
       railsToDo.getNotes()
     })
   }
-
+// this method is getting the current status and adding styling classes as required.  it hides the dislike button if liked and hides the chat if dislike pressed.
 railsToDo.getNotes = function(){
   var id = $('#relationship').val()
   if(id != ""){

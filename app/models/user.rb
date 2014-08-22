@@ -33,7 +33,7 @@ class User < ActiveRecord::Base
     def self.looking(sex, target_sex)
         self.where({gender: sex,looking_for: target_sex})
     end
-
+##search method implemented on each page
     def self.search(search)
       if search
         find(:all, :conditions => ['first_name LIKE ?', "%#{search}%"])
@@ -41,7 +41,7 @@ class User < ActiveRecord::Base
         find(:all)
       end
     end
-
+## potentail valiators
     # validates :first_name, presence: true
     # validates :last_name, presence: true
     # validates :image_1, presence: true

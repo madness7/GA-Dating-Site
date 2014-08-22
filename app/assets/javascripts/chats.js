@@ -1,7 +1,7 @@
 var railsChat = railsChat || {};
 
 railsChat.fields = ["username", "other_user", "message"]
-
+// appending all values to the list displayed.  initally deleted so not to repeat.
 railsChat.getNotes = function(){
   $("table tbody").html("")
   $.getJSON("/chats", function(data){
@@ -22,7 +22,7 @@ railsChat.getNotes = function(){
     })
   })
 }
-
+// this is creating a new chat with a user value, reciever value and the message.
 railsChat.postNote = function(event){
   event.preventDefault();
   $.ajax({
@@ -33,13 +33,13 @@ railsChat.postNote = function(event){
   }).success(function(){railsChat.getNotes()
   })
 }
-
+// updating the chat regularly.
 railsChat.updateRegularly = function() {
   setInterval(function() {
     railsChat.getNotes();
   }, 5000);
 }
-
+// checking if its the chat page before allowing the update to happen regularly.
 $(function(){
   railsChat.getNotes()
   if($("#chat").val()){
