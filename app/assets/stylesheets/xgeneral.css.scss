@@ -10,7 +10,8 @@ body {
   background-color: rosybrown;
   color: lightblue;
   width: 980px;
-  border: solid white 1px;
+  min-height: 980px;
+  border: solid lightblue 5px;
   margin: auto;
 }
 
@@ -24,7 +25,7 @@ header #nav_bar {
   padding: 0; 
   margin-top:0.4em; 
   white-space:nowrap;}
-
+/*Sets the Nav Bar to use 100% of the width of the screen*/
 #nav_bar ul {
   width: 100%;
   margin: 0;
@@ -39,7 +40,7 @@ header #nav_bar {
   text-align: center;
   display:inline-block;
 }
-
+/*Using Pseudo classes to control hover over activity for nav buttons*/
 #nav_bar a:link, #nav_bar a:visited {
   display: inline-block;
   font-weight: bold;
@@ -50,18 +51,11 @@ header #nav_bar {
   text-decoration: none;
   text-transform: uppercase;
 }
-
+/*Using Pseudo classes to control hover over activity for nav buttons*/
   #nav_bar a:hover, a:active {
   background-color: lightgrey;
 }
-
-/*img {
-    display:inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    border: solid white 3px;
-}*/
-
+/*.basic class, Controls styling for the basic profile information*/
 .basic {
    margin-right: 10px;
    display: inline-block;
@@ -75,6 +69,7 @@ header #nav_bar {
   background-color: #7A991A;
 
 }
+/*container for profile picture and basic profile information */
 .info_box {
   text-align: center;
 }
@@ -97,7 +92,7 @@ a {
   color: green;
   text-decoration: none
 }
-
+/*All .msg_ classes refer to the image slideshow which scrolls through the user selected images*/
 .msg_slideshow{
   margin: auto;
   width:400px;
