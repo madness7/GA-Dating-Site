@@ -1,16 +1,16 @@
 * {
   box-sizing: border-box;
 }
-
+/*background image, fixed to not scroll with the body */
 html {
   background-image: url('paris.jpg');
   /*background-size: contain;*/
   background-attachment: fixed;
   background-repeat: no-repeat;
    background-size: 100%;
-  /*background-position: top center;*/
 
 }
+/*Body colour applied with opacity to show background image through*/
 body {
   font-family: Arial;
   background-color: rgba(255, 255, 255, 0.7);

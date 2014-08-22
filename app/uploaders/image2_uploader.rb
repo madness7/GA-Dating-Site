@@ -1,5 +1,5 @@
 # encoding: utf-8
-
+# one of 3 uploaders created to allow multiple images to be uploaded and used in msg_wrapper carousel
 class Image2Uploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:

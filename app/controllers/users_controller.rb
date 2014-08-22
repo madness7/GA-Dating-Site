@@ -2,11 +2,7 @@ class UsersController < ApplicationController
 
    before_filter :authenticate_user!
 
- 
-
   def index
-    puts params 
-    puts '-' * 90 
     if params[:id] 
       puts 'I am inside the if statment'
       @user = User.find(params[:id])

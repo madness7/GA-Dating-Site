@@ -4,7 +4,7 @@ table {
   background: rgba(0, 0, 0, 0.6);
   color: rgba(255, 255, 255, 0.9);
 }
-
+/* Setting to centralise live chat window */
 #message  {
   width: 400px;
 }
@@ -44,7 +44,7 @@ td {
     vertical-align: middle;
     font-style: italic;
 }
-/*tr:nth-child(even) and (odd) alternate row colours in the chat table*/
+/* alternating colours for table rows*/
 tr:nth-child(even) {
   background: #CCC;
 }

@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
 
+# constant to be used in limiting the predicates available to the user in Ransack advanced search
   RANSACK_PREDICATES = {"starts with" => :start, "contains" => :cont, "matches" => :match, "equals" => :eq}
 
   # Include default devise modules. Others available are:
@@ -49,6 +50,7 @@ class User < ActiveRecord::Base
     # validates :image_3, presence: true
     # validates :about_me, presence: true
 
+# Constant and method to limit the searchable fields visible to the user when advance search is implemented in ransack
   UNRANSACKABLE_ATTRIBUTES = ["reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "dob", "image_1", "image_2", "image_3", "profile_pic", "uid", "provider", "updated_at", "unconfirmed_email", "confirmation_sent_at", "confirmed_at", "confirmation_token", "last_sign_in_ip", "current_sign_in_ip", "last_sign_in_at",  "current_sign_in_at", "sign_in_count", "encrypted_password", "user_id", "id", "about_me"  ]
 
   def self.ransackable_attributes auth_object = nil
