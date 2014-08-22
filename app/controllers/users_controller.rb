@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     if params[:id] 
       puts 'I am inside the if statment'
       @user = User.find(params[:id])
-    else
+    else #The methods defined in the user model that scope the search of the random match button are used below.
       @users = User.where("id != ?", current_user.id)
             @users = @users.looking(current_user.looking_for, current_user.gender)
             @users = @users.interests(@users, current_user.interests[0].name)

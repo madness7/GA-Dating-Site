@@ -9,7 +9,8 @@ class User < ActiveRecord::Base
   
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name, :dob, :image_1, :image_2, :image_3, :gender, :looking_for, :profile_pic, :about_me, :post_code, :provider, :uid, :interest_ids
-  # attr_accessible :title, :body
+ 
+#both the user_connections model and the chats model are uni-directional many to many associaitons with the users model highlighted by the associations set out below
 
   has_many(:user_connections, :foreign_key => :user_1_id, :dependent => :destroy)
   has_many(:reverse_user_connections, :class_name => :UserConnection, :foreign_key => :user_2_id, :dependent => :destroy)
@@ -26,10 +27,12 @@ class User < ActiveRecord::Base
   mount_uploader :image_2, Image2Uploader
   mount_uploader :image_3, Image3Uploader
   
+  #a scope allowing the random match finder button to take in to account the interest that the users have selected. The reason that we used this scope rather than just having a 'has_one' assocation was so we could scale it to include more than one interest if we wanted to.
      def self.interests(users, interest)
    users.reject{|user| !user.interests.pluck(:name).include?(interest)}    
     end
 
+#the method below  allows for the random match button to take into account both users gender and the gender of the match they are looking for.
     def self.looking(sex, target_sex)
         self.where({gender: sex,looking_for: target_sex})
     end
@@ -55,6 +58,7 @@ class User < ActiveRecord::Base
       (column_names - UNRANSACKABLE_ATTRIBUTES) + _ransackers.keys
   end
   
+  #bellow is the method for the Oauth log in feature. We added in the potential functionality for more than one provider but the app currently only uses Facebook log in.
   def self.from_omniauth(auth)
     
     twitter_email = if auth.provider =="twitter" then auth.info.nickname.downcase + "@twitter.com" end
