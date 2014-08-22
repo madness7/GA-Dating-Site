@@ -2,7 +2,7 @@
 <% if @user_connections %>
   <% @user_connections.each do |user| %>
     </br>
-    <%= link_to users_path(:id => user.user_1_id ) do %>
+    <%= link_to users_path(:id => user.user_1_id ), class: "user_image"  do %>
       <% if User.find(user.user_1_id).image_1.path %>
         <%= image_tag User.find(user.user_1_id).image_1, width: 200 %>
       <% else %>
@@ -13,7 +13,7 @@
 <% elsif @users %>
   <% @users.each do |user| %>
     </br>
-    <%= link_to users_path(:id => user.id ) do %>
+    <%= link_to users_path(:id => user.id ), class: "user_image" do %>
       <% if user.image_1.path %>
         <%= image_tag user.image_1, width: 200 %>
       <% else %>
