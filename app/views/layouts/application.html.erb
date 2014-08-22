@@ -16,23 +16,25 @@
       <%= current_user.email %>
 
     </br>
-    <nav id="nav_bar">
-      <a><%= link_to "Connections", connections_path %></a>
-      <a><%= link_to "Home", root_path %></a>
-      <a><%= link_to "Edit Profile", edit_user_registration_path %></a>
-      <a><%= link_to "Logout", destroy_user_session_path, method: :delete %></a>
+
+    <ul id="nav_bar">
+      <li><a><%= link_to "Connections", connections_path %></a></li>
+      <li><a><%= link_to "Home", root_path %></a></li>
+      <li><a><%= link_to "Edit Profile", edit_user_registration_path %></a></li>
+      <li><a><%= link_to "Logout", destroy_user_session_path, method: :delete %></a></li>
+    </header>
       <%= form_tag(connections_path, :method => "get" ) do %>
-        <a><%= text_field_tag :search, params[:search], placeholder: "Search by name..." %><%= submit_tag "Search" %></a>
-        <% end %>
+              <a><%= text_field_tag :search, params[:search], placeholder: "Search by name..." %><%= submit_tag "Search" %></a>
+              <% end %>
       <% else %>
       <a><%= link_to "Sign Up", new_user_registration_path %></a>
-    </nav>
+    </ul>
 
     <%= link_to "Login", new_user_session_path %>
 
     <% end %>
     
-  </header>
+  
   <%= yield %>
 
 </body>

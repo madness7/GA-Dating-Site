@@ -1,5 +1,54 @@
+
 table {
   background-color: rgba(0, 0, 0, 0.6);
   background: rgba(0, 0, 0, 0.6);
   color: rgba(255, 255, 255, 0.9);
 }
+
+#message  {
+  width: 400px;
+}
+.form {
+  text-align: center;
+}
+.field  {
+  vertical-align: left;
+}
+.field, .actions {
+  display: inline-block;
+  margin: 1em 0 0.5em 0;
+}
+
+table {
+    border: solid black 1px;
+    border-collapse: collapse;
+    width: 50%;
+    text-align: left;
+    margin: 0 auto;
+}
+
+table, th, td {
+   color: black;  
+   background-color: white;
+   opacity: 0.5;
+   height: 1em;
+}
+
+th {
+  text-align: center;
+  background-color: lightgrey;
+}
+
+td {
+    height: 1em;
+    vertical-align: middle;
+    font-style: italic;
+}
+/*tr:nth-child(even) and (odd) alternate row colours in the chat table*/
+tr:nth-child(even) {
+  background: #CCC;
+}
+tr:nth-child(odd) {
+  background: #FFF;
+}
+

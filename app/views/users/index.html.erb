@@ -2,32 +2,42 @@
 <%= hidden_field_tag("this_user", value = @user.id.to_i) %>
 <%= hidden_field_tag("relationship", value = @c) %>
 
-<%= image_tag @user.image_1, width: 200 %>
+ <div class="info_box">
+ <% if @user.image_1.present? %>
+  <div class="profile_image">
+    <%= image_tag @user.image_1, width: 200 %>
+  </div>
+ <% end %>
 
-<p>
-  <b>Name:</b>
-  <%= @user.first_name %><%= @user.last_name %>
-</p>
+   <div class="basic">
+      <p class="profile">
+      <b>Name:</b>
+      <%= @user.first_name %><%= @user.last_name %>
+      </p>
 
-<p>
-  <b>Date of Birth</b>
-  <%= @user.dob %>
-</p>
+   <p class="profile">
+     <b>Gender</b>
+     <%= @user.gender %>
+   </p>
+   <p class="profile">
+     <b>Looking for</b>
+     <%= @user.looking_for %>
+   </p>
 
-<p>
-  <b>Gender</b>
-  <%= @user.gender %>
-</p>
+   <p class="profile">
+     <b>Date of Birth</b>
+     <%= @user.dob %>
+   </p>
+  <%= link_to 'Random Partner Search', users_path %>
 
-<p>
-  <b>About me</b>
-  <%= @user.about_me %>
-</p>
+   </div>
+</div>
 
-<p>
-  <b>Looking for</b>
-  <%= @user.looking_for %>
-</p>
+
+ <p id="about_me" class="profile">
+   <b>About me</b>
+   <%= @user.about_me %>
+ </p>
 
 <div class="content">
   <div id="msg_slideshow" class="msg_slideshow">
