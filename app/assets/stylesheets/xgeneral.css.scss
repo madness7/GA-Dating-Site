@@ -3,18 +3,21 @@
 }
 
 html {
-  background-color: Lightgrey;
+  background-image: url('paris.jpg');
+ /* background-repeat: no-repeat;*/
+  background-size: contain;
+  /*bachground-size: cover;*/
+
 }
 body {
   font-family: Arial;
-  background-color: rosybrown;
- /* background-image: url('hands.jpg');
+  background-color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.7);
   background-repeat: no-repeat;
-  background-size: cover;*/
-  color: lightblue;
+  color: black;
   width: 980px;
   min-height: 980px;
-  border: solid lightblue 5px;
+  border: solid red 1px;
   margin: auto;
 }
 
