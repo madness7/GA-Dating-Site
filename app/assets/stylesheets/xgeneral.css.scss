@@ -25,6 +25,15 @@ header #nav_bar {
   padding: 0; 
   margin-top:0.4em; 
   white-space:nowrap;}
+
+a {
+  color: black;
+  text-decoration: none
+}
+a:hover, a:active {
+  background-color: lightgrey;
+}
+
 /*Sets the Nav Bar to use 100% of the width of the screen*/
 #nav_bar ul {
   width: 100%;
@@ -88,10 +97,7 @@ header #nav_bar {
   text-align:center;
   border: solid lightgrey 1px;
 }
-a {
-  color: green;
-  text-decoration: none
-}
+
 /*All .msg_ classes refer to the image slideshow which scrolls through the user selected images*/
 .msg_slideshow{
   margin: auto;
