@@ -13,7 +13,7 @@ railsToDo.likeNote = function(event){
     var data = {user_connections: {'user_1_id': parseInt($('#current_user').val()), 'user_2_id': parseInt($('#this_user').val()), 'negative_connection': false, 'interacted': true }}
   }else{
     var method = "PUT";
-    var path = "/user_connections/"+id;
+    var path = "/user_connections/"+id+"?&authenticity_token=" + AUTH_TOKEN;
     if($("#like").val()=="true"){
       var bool = false
     }else if($("#like").val()=="false"){
